@@ -1,8 +1,9 @@
-# Getting Started with Create React App
+# Lilium 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Weather application to get information for different cities.\
+This project was developed with React, so below scripts apply.
 
-## Available Scripts
+## Available scripts
 
 In the project directory, you can run:
 
