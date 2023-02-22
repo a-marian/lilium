@@ -1,0 +1,29 @@
+.logo-main {
+    width: 70px;
+    height: 70px;
+}
+
+.time-ticker{
+    font-weight: 600;
+    margin: 20px auto 0 auto;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+}
+
+.date-time-tick{
+    width : 200px;
+    justify-content: space-between;
+    line-height: 1;
+}
+.date-time-tick .time{
+    font-size: 40px;
+    font-weight: 300;
+}
+
+.date-time-tick .time{
+    font-size: 40px;
+    font-weight: 600;
+}
