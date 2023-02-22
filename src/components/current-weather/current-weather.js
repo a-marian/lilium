@@ -8,7 +8,7 @@ const CurrentWeather = ({data}) => {
                     <p className="city"> {data.city}</p>
                     <p className="weather-description"> {data.weather[0].description}</p>
                 </div>
-                <img alt="weather" className="weather-icon" src={`/${data.weather[0].icon}.png`} />
+                <img alt="weather" className="weather-icon" src={`./assets/icons/${data.weather[0].icon}.png`} />
             </div>
 
             <div className="bottom">
@@ -18,12 +18,12 @@ const CurrentWeather = ({data}) => {
                         <span className="parameter-label top">Details</span>
                     </div>
                     <div className="parameter-row">
-                        <span className="parameter-label"> Feels like</span>
-                        <span className="parameter-label">{Math.round(data.main.feels_like)}°C</span>
-                    </div>
-                    <div className="parameter-row">
                         <span className="parameter-label"> Wind</span>
                         <span className="parameter-label">{data.wind.speed}m/s</span>
+                    </div>
+                    <div className="parameter-row">
+                        <span className="parameter-label"> Feels like</span>
+                        <span className="parameter-label">{Math.round(data.main.feels_like)}°C</span>
                     </div>
                     <div className="parameter-row">
                         <span className="parameter-label">Humidity</span>

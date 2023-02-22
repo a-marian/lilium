@@ -40,11 +40,9 @@ const fetchCityData = (lat, lon, label) => {
 
     const getDefaultLocate =  async() => {
         const location = await axios.get(IP_ADD_API);
-        console.log(location.data);
         const city = location.data.city;
         const countryCode = location.data.country;
         const cityLabel = city.concat(", ").concat(countryCode);
-        console.log(cityLabel);
         fetchCityData(location.data.latitude, location.data.longitude, cityLabel);
     }
 
