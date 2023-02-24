@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/lilium/static/css/main.85ad98fb.css",
+    "main.js": "/lilium/static/js/main.dfb2a863.js",
+    "static/media/logo.png": "/lilium/static/media/logo.f7f1280535406e240645.png",
+    "index.html": "/lilium/index.html",
+    "main.85ad98fb.css.map": "/lilium/static/css/main.85ad98fb.css.map",
+    "main.dfb2a863.js.map": "/lilium/static/js/main.dfb2a863.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.85ad98fb.css",
+    "static/js/main.dfb2a863.js"
+  ]
+}
