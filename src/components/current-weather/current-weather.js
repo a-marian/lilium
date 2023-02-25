@@ -8,7 +8,7 @@ const CurrentWeather = ({data}) => {
                     <p className="city"> {data.city}</p>
                     <p className="weather-description"> {data.weather[0].description}</p>
                 </div>
-                <img alt="weather" className="weather-icon" src={`./assets/icons/${data.weather[0].icon}.png`} />
+                <img alt="weather" className="weather-icon" src={require(`../../assets/icons/${data.weather[0].icon}.png`)} />
             </div>
 
             <div className="bottom">
