@@ -1,4 +1,3 @@
-import logo from './assets/images/logo.png';
 import './App.css';
 import Search from "./components/search/search";
 import CurrentWeather from "./components/current-weather/current-weather";
@@ -6,6 +5,7 @@ import Forecast from "./components/forecast/forecast";
 import {IP_ADD_API, WEATHER_API_KEY, WEATHER_API_URL} from "./api";
 import {useEffect, useState} from "react";
 import TimeTicker from "./components/timeTicker/time-ticker";
+import PomodoroTimer from "./components/pomodoro/pomodoro";
 import axios from "axios";
 
 function App() {
@@ -16,12 +16,8 @@ function App() {
 
 const  [currentWeather, setCurrentWeather]= useState(null);
 const [forecast, setForecast] = useState(null);
+const [view, setView] = useState("home"); // "home" | "forecast"
 
-const handleOnSearchChange = (searchData) => {
-    const[lat, lon] =searchData.value.split(" ");
-    console.log("Label :" + searchData.label);
-    fetchCityData(lat, lon, searchData.label);
-}
 
 const fetchCityData = (lat, lon, label) => {
     const currentWeatherFetch = fetch(`${WEATHER_API_URL}/weather?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`);
@@ -33,6 +29,7 @@ const fetchCityData = (lat, lon, label) => {
             const forecastResponse = await response[1].json();
             setCurrentWeather({city:  label, ...weatherResponse});
             setForecast({city: label, ...forecastResponse});
+            setView("home");
         })
         .catch((err) => console.log(err));
     }
@@ -51,10 +48,30 @@ const fetchCityData = (lat, lon, label) => {
     return (
         <div className="container">
             <TimeTicker />
+            <PomodoroTimer />
+            {view === "home" && (
+                <>
+                    {currentWeather && (
+                        <CurrentWeather
+                            data={currentWeather}
+                            onShowForecast={() => setView("forecast")}
+                        />
+                    )}
+                </>
+            )}
 
-            <Search onSearchChange = {handleOnSearchChange}/>
-            {currentWeather && <CurrentWeather data={currentWeather}/>}
-            {forecast && <Forecast data={forecast} />}
+            {view === "forecast" && forecast && (
+                <div className="forecast-page">
+                    <button
+                        type="button"
+                        className="forecast-back-button"
+                        onClick={() => setView("home")}
+                    >
+                        ← Back to today&apos;s weather
+                    </button>
+                    <Forecast data={forecast} />
+                </div>
+            )}
         </div>
     );
 

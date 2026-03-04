@@ -30,6 +30,19 @@
     margin:0;
 }
 
+.weather-description-button {
+    background: none;
+    border: none;
+    padding: 0;
+    color: inherit;
+    cursor: pointer;
+}
+
+.weather-description-button:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+}
+
 .weather-icon{
     width: 100px;
 }

@@ -12,3 +12,24 @@ body{
   max-width: 100%;
   margin: 20px auto;
 }
+
+.forecast-page {
+  max-width: 420px;
+  margin: 10px auto 20px auto;
+}
+
+.forecast-back-button {
+  border: none;
+  border-radius: 999px;
+  padding: 6px 14px;
+  margin: 0 0 10px 0;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: #eef2ff;
+  color: #05299e;
+}
+
+.forecast-back-button:hover {
+  background-color: #e0e7ff;
+}

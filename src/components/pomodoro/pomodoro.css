@@ -1,0 +1,95 @@
+.pomodoro {
+  max-width: 360px;
+  margin: 10px 20px 20px 20px;
+  padding: 16px 20px;
+  border-radius: 16px;
+  background-color: #ffffff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  color: #1f2933;
+}
+
+.pomodoro-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.pomodoro-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.pomodoro-mode {
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.pomodoro-mode-work {
+  background-color: #e0edff;
+  color: #2251ff;
+}
+
+.pomodoro-mode-break {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+.pomodoro-time {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  margin: 8px 0 12px 0;
+}
+
+.pomodoro-controls {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.pomodoro-button {
+  border: none;
+  border-radius: 999px;
+  padding: 8px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.pomodoro-button-primary {
+  background-color: #2251ff;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(34, 81, 255, 0.4);
+}
+
+.pomodoro-button-primary:hover {
+  background-color: #1b46db;
+}
+
+.pomodoro-button-secondary {
+  background-color: #eef2ff;
+  color: #1f2933;
+}
+
+.pomodoro-button-secondary:hover {
+  background-color: #e0e7ff;
+}
+
+.pomodoro-button:active {
+  transform: translateY(1px);
+  box-shadow: none;
+}
+
+.pomodoro-hint {
+  margin: 0;
+  font-size: 12px;
+  color: #6b7280;
+  text-align: center;
+}
+
